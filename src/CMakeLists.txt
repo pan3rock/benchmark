@@ -18,4 +18,13 @@ add_executable(arma_opt2
   arma_opt2.cc)
 
 target_link_libraries(arma_opt2
-  ${ARMADILLO_LIBRARIES})
+  ${ARMADILLO_LIBRARIES}
+  ${BLAS_LIBRARIES}
+  ${LAPARK_LIBRARIES})
+
+add_executable(eigen
+  timer.cc
+  eigen.cc)
+
+target_link_libraries(eigen
+  Eigen3::Eigen)
